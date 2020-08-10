@@ -78,9 +78,120 @@ select {
 /*-------------------------*/
 /*---------FONTS-----------*/
 /*-------------------------*/
+@font-face {
+  font-family: FontName;
+  src: url("path/filename.woff") format("woff");
+}
+
 /*-----------------------*/
 /*---------APP-----------*/
 /*-----------------------*/
+.app {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr;
+  grid-template-columns: 100px 1fr;
+  -ms-grid-rows: 100px 1fr;
+  grid-template-rows: 100px 1fr;
+  font-family: 'FontName', Helvetica, Arial, sans-serif;
+}
+
+/*-----------------------*/
+/*---------LOGO----------*/
+/*-----------------------*/
+.logo {
+  background-color: #6F52ED;
+}
+
+/*-----------------------*/
+/*---------HEADER--------*/
+/*-----------------------*/
+.header {
+  background-color: #FFFFFF;
+}
+
+/*-----------------------*/
+/*---------NAV-----------*/
+/*-----------------------*/
+.nav {
+  background-color: #373B53;
+}
+
+/*-----------------------*/
+/*---------BOARD---------*/
+/*-----------------------*/
+.board {
+  background-color: #DFE1EB;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "head head head head" "students average underperforming homeworks" "barChart barChart rating donut" "barChart barChart rating donut" "lections hours rating donut";
+}
+
+.board_head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: head;
+}
+
+.board_students {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: students;
+}
+
+.board_average {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: average;
+}
+
+.board_underperforming {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: underperforming;
+}
+
+.board_homeworks {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: homeworks;
+}
+
+.board_barChart {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: barChart;
+}
+
+.board_rating {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: rating;
+}
+
+.board_donut {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: donut;
+}
+
+.board_lections {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: lections;
+}
+
+.board_hours {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: hours;
+}
+
 /*-----------------------*/
 /*---------MEDIA---------*/
 /*-----------------------*/

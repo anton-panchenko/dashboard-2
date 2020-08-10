@@ -5,7 +5,82 @@
 /*---------APP-----------*/
 /*-----------------------*/
 
+.app{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px 1fr;
+  font-family: 'FontName', Helvetica, Arial, sans-serif;
+}
 
+/*-----------------------*/
+/*---------LOGO----------*/
+/*-----------------------*/
+
+.logo{
+  background-color: #6F52ED;
+}
+
+/*-----------------------*/
+/*---------HEADER--------*/
+/*-----------------------*/
+
+.header{
+  background-color: #FFFFFF;
+}
+
+/*-----------------------*/
+/*---------NAV-----------*/
+/*-----------------------*/
+
+.nav{
+  background-color: #373B53;
+}
+
+/*-----------------------*/
+/*---------BOARD---------*/
+/*-----------------------*/
+
+.board{
+  background-color: #DFE1EB;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "head head head head"
+  "students average underperforming homeworks"
+  "barChart barChart rating donut"
+  "barChart barChart rating donut"
+  "lections hours rating donut";
+}
+
+.board_head{
+  grid-area: head;
+}
+.board_students{
+  grid-area: students;
+}
+.board_average{
+  grid-area: average;
+}
+.board_underperforming{
+  grid-area: underperforming;
+}
+.board_homeworks{
+  grid-area: homeworks;
+}
+.board_barChart{
+  grid-area: barChart;
+}
+.board_rating{
+  grid-area: rating;
+}
+.board_donut{
+  grid-area: donut;
+}
+.board_lections{
+  grid-area: lections;
+}
+.board_hours{
+  grid-area: hours;
+}
 
 
 @import "media";
