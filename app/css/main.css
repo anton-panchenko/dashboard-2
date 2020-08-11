@@ -79,8 +79,24 @@ select {
 /*---------FONTS-----------*/
 /*-------------------------*/
 @font-face {
-  font-family: FontName;
-  src: url("path/filename.woff") format("woff");
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff");
 }
 
 /*-----------------------*/
@@ -93,7 +109,7 @@ select {
   grid-template-columns: 100px 1fr;
   -ms-grid-rows: 100px 1fr;
   grid-template-rows: 100px 1fr;
-  font-family: 'FontName', Helvetica, Arial, sans-serif;
+  font-family: 'Gilroy', Helvetica, Arial, sans-serif;
 }
 
 /*-----------------------*/
@@ -101,6 +117,16 @@ select {
 /*-----------------------*/
 .logo {
   background-color: #6F52ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 10px 0;
 }
 
 /*-----------------------*/
@@ -115,16 +141,89 @@ select {
 /*-----------------------*/
 .nav {
   background-color: #373B53;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav svg {
+  width: 24px;
+  height: 24px;
+  stroke: #969CBA;
+}
+
+.nav_item {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  width: 54px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 3px 0 0 0;
+  cursor: pointer;
+}
+
+.nav_item:hover svg {
+  stroke: #713BDB;
+}
+
+.nav .active {
+  background-color: #FFFFFF;
+}
+
+.nav_settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.nav_settings::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #494E67;
 }
 
 /*-----------------------*/
 /*---------BOARD---------*/
 /*-----------------------*/
 .board {
+  display: -ms-grid;
+  display: grid;
   background-color: #DFE1EB;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "head head head head" "students average underperforming homeworks" "barChart barChart rating donut" "barChart barChart rating donut" "lections hours rating donut";
+  padding: 50px 60px 64px 60px;
 }
 
 .board_head {
@@ -132,6 +231,77 @@ select {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: head;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head_title__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0 0 10px 0;
+}
+
+.head_title__subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+}
+
+.head_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head_btns__btn {
+  height: 50px;
+  padding: 0 20px;
+  margin: 0 0 0 30px;
+  cursor: pointer;
+  border: 1px solid #DADCE6;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head_btns__btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #6F52ED;
+}
+
+.head_btns__btn p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: #6F52ED;
+  margin: 0 0 0 14px;
 }
 
 .board_students {

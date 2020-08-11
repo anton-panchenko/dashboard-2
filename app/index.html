@@ -11,25 +11,96 @@
 <body>
 
 <div class="app">
-    <div class="logo"></div>
-    <div class="header"></div>
-    <div class="nav"></div>
+    <a href="#" class="logo">
+        <img src="img/dest/logo.png" alt="logo">
+    </a><!--end logo-->
+    <div class="header"></div><!--end logo-->
+    <div class="nav">
+        <div class="nav_wrap">
+            <div class="nav_items">
+                <div class="nav_item">
+                    <div class="nav_item__img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#folders"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="nav_item active">
+                    <div class="nav_item__img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#chart"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="nav_item">
+                    <div class="nav_item__img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#mail"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="nav_item">
+                    <div class="nav_item__img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#files"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div><!--end nav_items-->
+            <div class="nav_settings">
+                <div class="nav_item">
+                    <div class="nav_settings__img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#settings"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div><!--end nav_settings-->
+        </div>
+    </div><!--end logo-->
     <div class="board">
-        <div class="tile board_head"></div>
-        <div class="tile board_students"></div>
-        <div class="tile board_average"></div>
-        <div class="tile board_underperforming"></div>
-        <div class="tile board_homeworks"></div>
-        <div class="tile board_barChart"></div>
-        <div class="tile board_rating"></div>
-        <div class="tile board_donut"></div>
-        <div class="tile board_lections"></div>
-        <div class="tile board_hours"></div>
-    </div>
-</div>
+        <div class="tile board_head">
+            <div class="head_title__wrap">
+                <h1 class="head_title__title">Dashboard</h1>
+                <p class="head_title__subtitle">Mobile UX/UI Design course</p>
+            </div>
+            <div class="head_btns">
+                <div class="head_btns__btn">
+                    <div class="head_btns__btn_img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#edit"></use>
+                        </svg>
+                    </div>
+                    <p>Manage dashboard</p>
+                </div>
+                <div class="head_btns__btn">
+                    <div class="head_btns__btn_img">
+                        <svg class="img">
+                            <use xlink:href="img/dest/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                    <p>Create new dashboard</p>
+                </div>
+            </div>
+        </div><!--end board_head-->
+        <div class="tile board_students"></div><!--end board_students-->
+        <div class="tile board_average"></div><!--end board_average-->
+        <div class="tile board_underperforming"></div><!--end board_underperforming-->
+        <div class="tile board_homeworks"></div><!--end board_homeworks-->
+        <div class="tile board_barChart"></div><!--end board_barChart-->
+        <div class="tile board_rating"></div><!--end board_rating-->
+        <div class="tile board_donut"></div><!--end board_donut-->
+        <div class="tile board_lections"></div><!--end board_lections-->
+        <div class="tile board_hours"></div><!--end board_hours-->
+    </div><!--end board-->
+</div><!--end app-->
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="js/charts.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
+
+<!--            <svg class="img">-->
+<!--                <use xlink:href="img/dest/sprite.svg#mail"></use>-->
+<!--            </svg>-->

@@ -19,6 +19,9 @@ const newer = require('gulp-newer');
 // Подключаем модуль del
 const del = require('del');
 
+//svg sprite
+const svgSprite = require('gulp-svg-sprite');
+
 // Определяем логику работы Browsersync
 function browsersync() {
     browserSync.init({ // Инициализация Browsersync
@@ -60,7 +63,19 @@ function startwatch() {
 
     // Мониторим папку-источник изображений и выполняем images(), если есть изменения
     watch('app/img/src/**/*', images);
+}
 
+function makeSprite() {
+    return src('app/img/src/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+                mode: {
+                    stack: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(dest('app/img/dest/'));
 }
 
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
@@ -77,3 +92,5 @@ exports.cleanimg = cleanimg;
 
 // Экспортируем дефолтный таск с нужным набором функций
 exports.default = parallel(styles, browsersync, startwatch);
+
+exports.makeSprite = makeSprite;
