@@ -30,6 +30,81 @@
 
 .header{
   background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px 0 60px;
+  &_search{
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  &_user{
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text{
+      cursor: pointer;
+      &_name{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: right;
+        letter-spacing: 0.01em;
+        color: #000000;
+        margin: 0 0 7px 0;
+      }
+      &_role{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: right;
+        letter-spacing: 0.01em;
+        color: #A6ACBE;
+      }
+    }
+    &__avatar{
+      margin: 0 18px 0 14px;
+      cursor: pointer;
+    }
+    &__more{
+      cursor: pointer;
+    }
+    &__notifications{
+      margin: 0 30px 0 57px;
+      cursor: pointer;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 64px;
+        background-color: #EFF4F7;
+        left: -27px;
+        top: -20px;
+      }
+    }
+    &__logout{
+      cursor: pointer;
+    }
+  }
+}
+input{
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+  margin: 0 0 0 14px;
 }
 
 /*-----------------------*/
@@ -43,8 +118,6 @@
   justify-content: space-between;
   align-items: center;
   svg{
-    width: 24px;
-    height: 24px;
     stroke: #969CBA;
   }
   &_item{
@@ -65,6 +138,9 @@
   }
   .active{
     background-color: #FFFFFF;
+    svg{
+      stroke: #713BDB;
+    }
   }
   &_settings{
     display: flex;
@@ -89,8 +165,9 @@
 
 .board{
   display: grid;
-  background-color: #DFE1EB;
+  background-color: #F8F8FB;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
   grid-template-areas:
   "head head head head"
   "students average underperforming homeworks"
@@ -139,11 +216,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      svg{
-        width: 20px;
-        height: 20px;
-        stroke: #6F52ED;
-      }
       p{
         font-weight: 600;
         font-size: 14px;
@@ -155,9 +227,81 @@
     }
   }
 }
+.edit{
+  svg{
+    stroke: #6F52ED;
+    margin: 5px 0 0 0;
+  }
+  &:hover{
+    svg{
+      stroke: #F8F8FB;
+      fill: #6F52ED;
+    }
+    background-color: #6F52ED;
+    p{
+      color: #F8F8FB;
+    }
+  }
+}
+.plus{
+  svg{
+    fill: #6F52ED;
+    margin: 5px 0 0 0;
+  }
+  &:hover{
+    svg{
+      fill: #F8F8FB;
+    }
+    background-color: #6F52ED;
+    p{
+      color: #F8F8FB;
+    }
+  }
+}
+
+.tile{
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 40px;
+  cursor: pointer;
+}
+.simple{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  &_icon{
+    width: 70px;
+    height: 70px;
+    margin: 0 30px 0 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_text{
+    &__counter{
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #000000;
+      margin: 0 0 12px 0;
+    }
+    &__title{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      color: #A6ACBE;
+    }
+  }
+}
 
 .board_students{
   grid-area: students;
+  .simple_icon{
+    background-color: #F8F5FD;
+  }
 }
 .board_average{
   grid-area: average;

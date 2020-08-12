@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="img/dest/logo.ico">
     <link rel="stylesheet" href="css/main.css">
     <title>Dashboard</title>
 </head>
@@ -14,35 +15,62 @@
     <a href="#" class="logo">
         <img src="img/dest/logo.png" alt="logo">
     </a><!--end logo-->
-    <div class="header"></div><!--end logo-->
+    <div class="header">
+        <div class="header_search__wrap">
+            <div class="header_search__img">
+                <img src="img/dest/search.png" alt="search">
+            </div>
+            <input type="search" value="Search...">
+        </div>
+        <div class="header_user__wrap">
+            <div class="header_user__text">
+                <div class="header_user__text_name">Cody Simmmons</div>
+                <div class="header_user__text_role">Lecturer</div>
+            </div>
+            <div class="header_user__avatar">
+                <img src="img/dest/avatar.png" alt="avatar">
+            </div>
+            <div class="header_user__more">
+                <img src="img/dest/more.png" alt="more">
+            </div>
+            <div class="header_user__notifications">
+                <img src="img/dest/notifications.png" alt="notifications">
+            </div>
+            <div class="header_user__logout">
+                <img src="img/dest/logout.png" alt="logout">
+            </div>
+        </div>
+    </div><!--end header-->
     <div class="nav">
         <div class="nav_wrap">
             <div class="nav_items">
                 <div class="nav_item">
                     <div class="nav_item__img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#folders"></use>
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 18.222c0 .472-.21.924-.586 1.257A2.13 2.13 0 0120 20H4c-.53 0-1.04-.187-1.414-.52A1.684 1.684 0 012 18.221V5.778c0-.472.21-.924.586-1.257A2.129 2.129 0 014 4h5l2 2.667h9c.53 0 1.04.187 1.414.52.375.334.586.786.586 1.257v9.778z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
                 <div class="nav_item active">
                     <div class="nav_item__img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#chart"></use>
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12v9h4v-9H2zm16-5v14h4V7h-4zm-8-4v18h4V3h-4z" fill="#713BDB" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
                 <div class="nav_item">
                     <div class="nav_item__img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#mail"></use>
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6l-10 7L2 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
                 <div class="nav_item">
                     <div class="nav_item__img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#files"></use>
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 2v7h7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
@@ -50,8 +78,9 @@
             <div class="nav_settings">
                 <div class="nav_item">
                     <div class="nav_settings__img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#settings"></use>
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a1.998 1.998 0 010 2.83 1.998 1.998 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a1.998 1.998 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 013.417 1.415 2 2 0 01-.587 1.415l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
@@ -59,39 +88,47 @@
         </div>
     </div><!--end logo-->
     <div class="board">
-        <div class="tile board_head">
+        <div class="board_head">
             <div class="head_title__wrap">
                 <h1 class="head_title__title">Dashboard</h1>
                 <p class="head_title__subtitle">Mobile UX/UI Design course</p>
             </div>
             <div class="head_btns">
-                <div class="head_btns__btn">
+                <div class="head_btns__btn edit">
                     <div class="head_btns__btn_img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#edit"></use>
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.667 5L15 8.333m.345-4.654l.976.976c.651.65.651 1.706 0 2.357l-9.654 9.655H3.333v-3.334l9.655-9.654a1.666 1.666 0 012.357 0z" stroke-width="2" stroke-linecap="square"/>
                         </svg>
                     </div>
                     <p>Manage dashboard</p>
                 </div>
-                <div class="head_btns__btn">
+                <div class="head_btns__btn plus">
                     <div class="head_btns__btn_img">
-                        <svg class="img">
-                            <use xlink:href="img/dest/sprite.svg#plus"></use>
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 11.143h-6.857V18H8.857v-6.857H2V8.857h6.857V2h2.286v6.857H18v2.286z"/>
                         </svg>
                     </div>
                     <p>Create new dashboard</p>
                 </div>
             </div>
         </div><!--end board_head-->
-        <div class="tile board_students"></div><!--end board_students-->
-        <div class="tile board_average"></div><!--end board_average-->
-        <div class="tile board_underperforming"></div><!--end board_underperforming-->
-        <div class="tile board_homeworks"></div><!--end board_homeworks-->
+        <div class="tile simple board_students">
+            <div class="simple_icon">
+                <img src="img/dest/person.png" alt="person">
+            </div>
+            <div class="simple_text">
+                <p class="simple_text__counter">62</p>
+                <p class="simple_text__title">Students</p>
+            </div>
+        </div><!--end board_students-->
+        <div class="tile simple board_average"></div><!--end board_average-->
+        <div class="tile simple board_underperforming"></div><!--end board_underperforming-->
+        <div class="tile simple board_homeworks"></div><!--end board_homeworks-->
         <div class="tile board_barChart"></div><!--end board_barChart-->
         <div class="tile board_rating"></div><!--end board_rating-->
         <div class="tile board_donut"></div><!--end board_donut-->
-        <div class="tile board_lections"></div><!--end board_lections-->
-        <div class="tile board_hours"></div><!--end board_hours-->
+        <div class="tile simple board_lections"></div><!--end board_lections-->
+        <div class="tile simple board_hours"></div><!--end board_hours-->
     </div><!--end board-->
 </div><!--end app-->
 
@@ -100,7 +137,3 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-
-<!--            <svg class="img">-->
-<!--                <use xlink:href="img/dest/sprite.svg#mail"></use>-->
-<!--            </svg>-->

@@ -134,6 +134,107 @@ select {
 /*-----------------------*/
 .header {
   background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 80px 0 60px;
+}
+
+.header_search__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header_user__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_user__text {
+  cursor: pointer;
+}
+
+.header_user__text_name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0 0 7px 0;
+}
+
+.header_user__text_role {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+}
+
+.header_user__avatar {
+  margin: 0 18px 0 14px;
+  cursor: pointer;
+}
+
+.header_user__more {
+  cursor: pointer;
+}
+
+.header_user__notifications {
+  margin: 0 30px 0 57px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header_user__notifications::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 64px;
+  background-color: #EFF4F7;
+  left: -27px;
+  top: -20px;
+}
+
+.header_user__logout {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+  margin: 0 0 0 14px;
 }
 
 /*-----------------------*/
@@ -157,8 +258,6 @@ select {
 }
 
 .nav svg {
-  width: 24px;
-  height: 24px;
   stroke: #969CBA;
 }
 
@@ -190,6 +289,10 @@ select {
   background-color: #FFFFFF;
 }
 
+.nav .active svg {
+  stroke: #713BDB;
+}
+
 .nav_settings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,9 +322,11 @@ select {
 .board {
   display: -ms-grid;
   display: grid;
-  background-color: #DFE1EB;
-  -ms-grid-columns: (1fr)[4];
+  background-color: #F8F8FB;
+  -ms-grid-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  -ms-grid-rows: auto 40px auto 40px auto 40px auto 40px auto;
       grid-template-areas: "head head head head" "students average underperforming homeworks" "barChart barChart rating donut" "barChart barChart rating donut" "lections hours rating donut";
   padding: 50px 60px 64px 60px;
 }
@@ -229,7 +334,7 @@ select {
 .board_head {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-column-span: 7;
   grid-area: head;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,12 +394,6 @@ select {
           align-items: center;
 }
 
-.head_btns__btn svg {
-  width: 20px;
-  height: 20px;
-  stroke: #6F52ED;
-}
-
 .head_btns__btn p {
   font-weight: 600;
   font-size: 14px;
@@ -304,61 +403,152 @@ select {
   margin: 0 0 0 14px;
 }
 
+.edit svg {
+  stroke: #6F52ED;
+  margin: 5px 0 0 0;
+}
+
+.edit:hover {
+  background-color: #6F52ED;
+}
+
+.edit:hover svg {
+  stroke: #F8F8FB;
+  fill: #6F52ED;
+}
+
+.edit:hover p {
+  color: #F8F8FB;
+}
+
+.plus svg {
+  fill: #6F52ED;
+  margin: 5px 0 0 0;
+}
+
+.plus:hover {
+  background-color: #6F52ED;
+}
+
+.plus:hover svg {
+  fill: #F8F8FB;
+}
+
+.plus:hover p {
+  color: #F8F8FB;
+}
+
+.tile {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 40px;
+  cursor: pointer;
+}
+
+.simple {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.simple_icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 30px 0 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.simple_text__counter {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0 0 12px 0;
+}
+
+.simple_text__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+}
+
 .board_students {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: students;
 }
 
+.board_students .simple_icon {
+  background-color: #F8F5FD;
+}
+
 .board_average {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: average;
 }
 
 .board_underperforming {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   grid-area: underperforming;
 }
 
 .board_homeworks {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
   grid-area: homeworks;
 }
 
 .board_barChart {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: barChart;
 }
 
 .board_rating {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 5;
   grid-area: rating;
 }
 
 .board_donut {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 4;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 7;
   grid-area: donut;
 }
 
 .board_lections {
-  -ms-grid-row: 5;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   grid-area: lections;
 }
 
 .board_hours {
-  -ms-grid-row: 5;
-  -ms-grid-column: 2;
+  -ms-grid-row: 9;
+  -ms-grid-column: 3;
   grid-area: hours;
 }
 
