@@ -9,5 +9,7 @@ document.querySelectorAll('.nav_item')
                     every.classList.remove('active')
                 });
             this.classList.add('active');
+            document.querySelector('#head_title')
+                .innerHTML = this.getAttribute('data-title');
         });
     });

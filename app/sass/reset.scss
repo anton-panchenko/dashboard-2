@@ -16,6 +16,7 @@ ol {
 body,
 div,
 span,
+canvas,
 a,
 p,
 h1,
@@ -31,6 +32,7 @@ figcaption,
 blockquote,
 dl,
 dd {
+  display: block;
   margin: 0;
   padding: 0;
 }

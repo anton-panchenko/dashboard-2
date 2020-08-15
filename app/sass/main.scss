@@ -113,12 +113,15 @@ input{
 
 .nav{
   background-color: #373B53;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   svg{
     stroke: #969CBA;
+  }
+  &_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   &_item{
     box-shadow: 0px 4px 10px
@@ -134,6 +137,7 @@ input{
     cursor: pointer;
     &:hover svg{
       stroke: #713BDB;
+      transition: .3s;
     }
   }
   .active{
@@ -142,7 +146,7 @@ input{
       stroke: #713BDB;
     }
   }
-  &_settings{
+  &_settings__wrap{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,6 +161,10 @@ input{
       background-color: #494E67;
     }
   }
+  &_settings{
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /*-----------------------*/
@@ -167,6 +175,7 @@ input{
   display: grid;
   background-color: #F8F8FB;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px repeat(4, 1fr);
   grid-gap: 40px;
   grid-template-areas:
   "head head head head"
@@ -185,7 +194,6 @@ input{
 }
 .head{
   &_title{
-    &__wrap{}
     &__title{
       font-weight: 600;
       font-size: 30px;
@@ -233,6 +241,7 @@ input{
     margin: 5px 0 0 0;
   }
   &:hover{
+    transition: .3s;
     svg{
       stroke: #F8F8FB;
       fill: #6F52ED;
@@ -249,6 +258,7 @@ input{
     margin: 5px 0 0 0;
   }
   &:hover{
+    transition: .3s;
     svg{
       fill: #F8F8FB;
     }
@@ -262,13 +272,27 @@ input{
 .tile{
   background-color: #FFFFFF;
   border-radius: 10px;
-  padding: 40px;
   cursor: pointer;
+  box-shadow: 0 3px 0 #EDEDF6;
+  &_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 55px 0;
+    &__title{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+  }
 }
 .simple{
   display: flex;
   justify-content: left;
   align-items: center;
+  padding: 40px;
   &_icon{
     width: 70px;
     height: 70px;
@@ -286,6 +310,19 @@ input{
       letter-spacing: 0.01em;
       color: #000000;
       margin: 0 0 12px 0;
+      &_wrap{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+    }
+    &__procent{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      color: #A6ACBE;
+      margin: 0 0 5px 5px;
     }
     &__title{
       font-weight: 500;
@@ -305,27 +342,269 @@ input{
 }
 .board_average{
   grid-area: average;
+  .simple_icon{
+    background-color: #F1FCF8;
+  }
 }
 .board_underperforming{
   grid-area: underperforming;
+  .simple_icon{
+    background-color: #FFF6F7;
+  }
 }
 .board_homeworks{
   grid-area: homeworks;
+  .simple_icon{
+    background-color: #F2FAFF;
+  }
 }
 .board_barChart{
   grid-area: barChart;
+  position: relative;
+  padding: 25px 40px 0 30px;
+  &__separator{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 74px;
+    left: 0;
+    background-color: #EEF0F7;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 50px 0;
+    &_title{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+    &_legend{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_dot{
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin: 0 12px 0 30px;
+        }
+        &_text{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          color: #A6ACBE;
+        }
+        &:nth-child(1){
+          .board_barChart__head_legend__item_dot{
+            background-color: #6F52ED;
+          }
+        }
+        &:nth-child(2){
+          .board_barChart__head_legend__item_dot{
+            background-color: #FF7A00;
+          }
+        }
+      }
+    }
+  }
+  &__chart{}
 }
 .board_rating{
   grid-area: rating;
+  padding: 25px 40px 35px 30px;
+  position: relative;
+  &__separator{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 74px;
+    left: 0;
+    background-color: #EEF0F7;
+  }
+  &__scroll{
+    position: absolute;
+    top: 166px;
+    right: 15px;
+    background-color: #DADCE4;
+    width: 3px;
+    height: 39px;
+    border-radius: 3px;
+  }
+  &__options{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    &_title{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #A6ACBE;
+      margin: 0 5px 0 0;
+    }
+  }
+  &__body{
+    &_item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 25px 0;
+      &__user{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        &_img{
+          margin: 0 15px 0 0;
+        }
+        &_name{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          color: #A6ACBE;
+        }
+      }
+      &__counter{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        color: #000000;
+      }
+    }
+    &_item:last-child{
+      margin: 0;
+    }
+  }
 }
 .board_donut{
   grid-area: donut;
+  position: relative;
+  padding: 25px 40px 47px 30px;
+  &__head{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin: 0 0 45px 0;
+  }
+  &__separator{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 74px;
+    left: 0;
+    background-color: #EEF0F7;
+  }
+  &__chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 255px;
+    position: relative;
+    margin: 0 0 20px 0;
+    &_circle{
+      position: absolute;
+      margin: 8px 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 103px;
+      height: 103px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__items{
+    &_item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 30px 0;
+      &__title{
+        display: flex;
+        align-items: center;
+        &_dot{
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin: 0 12px 3px 0;
+        }
+        &_text{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          color: #A6ACBE;
+        }
+      }
+      &__counters{
+        display: flex;
+        align-items: center;
+        &_num{
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          color: #000000;
+        }
+        &_precent{
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          color: #A6ACBE;
+          margin: 3px 0 0 5px;
+        }
+      }
+      &:nth-child(1){
+        .board_donut__items_item__title_dot{
+          background-color: #6F52ED;
+        }
+      }
+      &:nth-child(2){
+        .board_donut__items_item__title_dot{
+          background-color: #FFB800;
+        }
+      }
+      &:nth-child(3){
+        .board_donut__items_item__title_dot{
+          background-color: #FF4C61;
+        }
+      }
+      &:nth-child(4){
+        .board_donut__items_item__title_dot{
+          background-color: #33D69F;
+        }
+        margin: 0 0 0 0;
+      }
+    }
+  }
 }
 .board_lections{
   grid-area: lections;
+  .simple_icon{
+    background-color: #FFFAED;
+  }
 }
 .board_hours{
   grid-area: hours;
+  .simple_icon{
+    background-color: #F2FAFF;
+  }
 }
 
 

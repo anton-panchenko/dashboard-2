@@ -44,21 +44,21 @@
     <div class="nav">
         <div class="nav_wrap">
             <div class="nav_items">
-                <div class="nav_item">
+                <div class="nav_item" data-title="Folders">
                     <div class="nav_item__img">
                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22 18.222c0 .472-.21.924-.586 1.257A2.13 2.13 0 0120 20H4c-.53 0-1.04-.187-1.414-.52A1.684 1.684 0 012 18.221V5.778c0-.472.21-.924.586-1.257A2.129 2.129 0 014 4h5l2 2.667h9c.53 0 1.04.187 1.414.52.375.334.586.786.586 1.257v9.778z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
-                <div class="nav_item active">
+                <div class="nav_item active" data-title="Dashboard">
                     <div class="nav_item__img">
                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 12v9h4v-9H2zm16-5v14h4V7h-4zm-8-4v18h4V3h-4z" fill="#713BDB" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
-                <div class="nav_item">
+                <div class="nav_item" data-title="Mail">
                     <div class="nav_item__img">
                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -66,7 +66,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="nav_item">
+                <div class="nav_item" data-title="Files">
                     <div class="nav_item__img">
                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -76,12 +76,14 @@
                 </div>
             </div><!--end nav_items-->
             <div class="nav_settings">
-                <div class="nav_item">
-                    <div class="nav_settings__img">
-                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a1.998 1.998 0 010 2.83 1.998 1.998 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a1.998 1.998 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 013.417 1.415 2 2 0 01-.587 1.415l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="nav_settings__wrap">
+                    <div class="nav_item" data-title="Settings">
+                        <div class="nav_settings__img">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a1.998 1.998 0 010 2.83 1.998 1.998 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a1.998 1.998 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 013.417 1.415 2 2 0 01-.587 1.415l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" fill="#969CBA" fill-opacity=".2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div><!--end nav_settings-->
@@ -90,7 +92,7 @@
     <div class="board">
         <div class="board_head">
             <div class="head_title__wrap">
-                <h1 class="head_title__title">Dashboard</h1>
+                <h1 class="head_title__title" id="head_title">Dashboard</h1>
                 <p class="head_title__subtitle">Mobile UX/UI Design course</p>
             </div>
             <div class="head_btns">
@@ -121,14 +123,207 @@
                 <p class="simple_text__title">Students</p>
             </div>
         </div><!--end board_students-->
-        <div class="tile simple board_average"></div><!--end board_average-->
-        <div class="tile simple board_underperforming"></div><!--end board_underperforming-->
-        <div class="tile simple board_homeworks"></div><!--end board_homeworks-->
-        <div class="tile board_barChart"></div><!--end board_barChart-->
-        <div class="tile board_rating"></div><!--end board_rating-->
-        <div class="tile board_donut"></div><!--end board_donut-->
-        <div class="tile simple board_lections"></div><!--end board_lections-->
-        <div class="tile simple board_hours"></div><!--end board_hours-->
+        <div class="tile simple board_average">
+            <div class="simple_icon">
+                <img src="img/dest/mark.png" alt="mark">
+            </div>
+            <div class="simple_text">
+                <p class="simple_text__counter">6.8</p>
+                <p class="simple_text__title">Average mark</p>
+            </div>
+        </div><!--end board_average-->
+        <div class="tile simple board_underperforming">
+            <div class="simple_icon">
+                <img src="img/dest/underperform.png" alt="underperform">
+            </div>
+            <div class="simple_text">
+                <div class="simple_text__counter_wrap">
+                    <p class="simple_text__counter">9</p>
+                    <p class="simple_text__procent">(14%)</p>
+                </div>
+                <p class="simple_text__title">Underperforming students</p>
+            </div>
+        </div><!--end board_underperforming-->
+        <div class="tile simple board_homeworks">
+            <div class="simple_icon">
+                <img src="img/dest/book.png" alt="book">
+            </div>
+            <div class="simple_text">
+                <p class="simple_text__counter">83%</p>
+                <p class="simple_text__title">Finished homeworks</p>
+            </div>
+        </div><!--end board_homeworks-->
+        <div class="tile board_barChart">
+            <div class="board_barChart__separator"></div>
+            <div class="board_barChart__head">
+                <p class="board_barChart__head_title">
+                    The number of applied and left students per month
+                </p>
+                <div class="board_barChart__head_legend">
+                    <div class="board_barChart__head_legend__item">
+                        <div class="board_barChart__head_legend__item_dot"></div>
+                        <p class="board_barChart__head_legend__item_text">Applied</p>
+                    </div>
+                    <div class="board_barChart__head_legend__item">
+                        <div class="board_barChart__head_legend__item_dot"></div>
+                        <p class="board_barChart__head_legend__item_text">Left</p>
+                    </div>
+                </div>
+            </div>
+            <div class="board_barChart__chart">
+                <canvas id="board_barChart__chart" height="85px"></canvas>
+            </div>
+        </div><!--end board_barChart-->
+        <div class="tile board_rating">
+            <div class="board_rating__separator"></div>
+            <div class="board_rating__scroll"></div>
+            <div class="tile_head">
+                <p class="tile_head__title">Students by average mark</p>
+                <div class="board_rating__options">
+                    <p class="board_rating__options_title">Descending</p>
+                    <div class="board_rating__options_img">
+                        <img src="img/dest/options.png" alt="options">
+                    </div>
+                </div>
+            </div>
+            <div class="board_rating__body">
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar1.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Annette Watson</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">9.3</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar2.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Calvin Steward</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">8.9</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar3.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Ralph Richards</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">8.7</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar4.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Bernard Murphy</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">8.2</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar5.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Arlene Robertson</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">8.2</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar6.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Jane Lane</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">8.1</p>
+                </div>
+                <div class="board_rating__body_item">
+                    <div class="board_rating__body_item__user">
+                        <div class="board_rating__body_item__user_img">
+                            <img src="img/dest/Avatar7.png" alt="avatar">
+                        </div>
+                        <p class="board_rating__body_item__user_name">Pat Mckinney</p>
+                    </div>
+                    <p class="board_rating__body_item__counter">7.9</p>
+                </div>
+            </div>
+        </div><!--end board_rating-->
+        <div class="tile board_donut">
+            <div class="board_donut__separator"></div>
+            <p class="board_donut__head">Students by type of studying</p>
+            <div class="board_donut__chart">
+                <div class="board_donut__chart_circle">
+                    <div class="board_donut__chart_circle__img">
+                        <img src="img/dest/mortarboard.png" alt="mortarboard">
+                    </div>
+                </div>
+                <canvas id="board_donut__chart" height="185px"></canvas>
+            </div>
+            <div class="board_donut__items">
+                <div class="board_donut__items_item">
+                    <div class="board_donut__items_item__title">
+                        <div class="board_donut__items_item__title_dot"></div>
+                        <p class="board_donut__items_item__title_text">Groups of 20 students</p>
+                    </div>
+                    <div class="board_donut__items_item__counters">
+                        <p class="board_donut__items_item__counters_num">20</p>
+                        <p class="board_donut__items_item__counters_precent">(32%)</p>
+                    </div>
+                </div>
+                <div class="board_donut__items_item">
+                    <div class="board_donut__items_item__title">
+                        <div class="board_donut__items_item__title_dot"></div>
+                        <p class="board_donut__items_item__title_text">Groups of 10 students</p>
+                    </div>
+                    <div class="board_donut__items_item__counters">
+                        <p class="board_donut__items_item__counters_num">20</p>
+                        <p class="board_donut__items_item__counters_precent">(32%)</p>
+                    </div>
+                </div>
+                <div class="board_donut__items_item">
+                    <div class="board_donut__items_item__title">
+                        <div class="board_donut__items_item__title_dot"></div>
+                        <p class="board_donut__items_item__title_text">Groups of 5 students</p>
+                    </div>
+                    <div class="board_donut__items_item__counters">
+                        <p class="board_donut__items_item__counters_num">15</p>
+                        <p class="board_donut__items_item__counters_precent">(24%)</p>
+                    </div>
+                </div>
+                <div class="board_donut__items_item">
+                    <div class="board_donut__items_item__title">
+                        <div class="board_donut__items_item__title_dot"></div>
+                        <p class="board_donut__items_item__title_text">Individual sessions</p>
+                    </div>
+                    <div class="board_donut__items_item__counters">
+                        <p class="board_donut__items_item__counters_num">7</p>
+                        <p class="board_donut__items_item__counters_precent">(12%)</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--end board_donut-->
+        <div class="tile simple board_lections">
+            <div class="simple_icon">
+                <img src="img/dest/cup.png" alt="cup">
+            </div>
+            <div class="simple_text">
+                <p class="simple_text__counter">25</p>
+                <p class="simple_text__title">Lections left</p>
+            </div>
+        </div><!--end board_lections-->
+        <div class="tile simple board_hours">
+            <div class="simple_icon">
+                <img src="img/dest/clock.png" alt="cup">
+            </div>
+            <div class="simple_text">
+                <p class="simple_text__counter">139</p>
+                <p class="simple_text__title">Hours spent on lections</p>
+            </div>
+        </div><!--end board_hours-->
     </div><!--end board-->
 </div><!--end app-->
 
