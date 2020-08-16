@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <link rel="icon" type="image/x-icon" href="img/dest/logo.ico">
     <link rel="stylesheet" href="css/main.css">
     <title>Dashboard</title>
@@ -170,9 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="board_barChart__chart">
-                <canvas id="board_barChart__chart" height="85px"></canvas>
-            </div>
+            <div class="board_barChart__chart" id="columnChart"></div>
         </div><!--end board_barChart-->
         <div class="tile board_rating">
             <div class="board_rating__separator"></div>
@@ -256,12 +255,12 @@
             <div class="board_donut__separator"></div>
             <p class="board_donut__head">Students by type of studying</p>
             <div class="board_donut__chart">
+                <div class="board_donut__chart_chart" id="donutChart"></div>
                 <div class="board_donut__chart_circle">
                     <div class="board_donut__chart_circle__img">
                         <img src="img/dest/mortarboard.png" alt="mortarboard">
                     </div>
                 </div>
-                <canvas id="board_donut__chart" height="185px"></canvas>
             </div>
             <div class="board_donut__items">
                 <div class="board_donut__items_item">
@@ -327,7 +326,7 @@
     </div><!--end board-->
 </div><!--end app-->
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>-->
 <script src="js/charts.js"></script>
 <script src="js/main.js"></script>
 </body>
