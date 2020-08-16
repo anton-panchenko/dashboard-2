@@ -145,7 +145,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 80px 0 60px;
+  padding: 0 calc(40px + 2.103049421661409vw) 0 calc(30px + 1.5772870662460567vw);
 }
 
 .header_search__wrap {
@@ -232,7 +232,7 @@ input {
   -webkit-box-shadow: none;
           box-shadow: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: calc(14px + 0.10515247108307045vw);
   line-height: 22px;
   letter-spacing: 0.01em;
   color: #A6ACBE;
@@ -268,8 +268,8 @@ input {
 }
 
 .nav_item {
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   width: 54px;
   height: 54px;
   display: -webkit-box;
@@ -337,13 +337,13 @@ input {
   display: -ms-grid;
   display: grid;
   background-color: #F8F8FB;
-  -ms-grid-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
+  -ms-grid-columns: 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr;
   grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 60px 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
+  -ms-grid-rows: 60px calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr;
   grid-template-rows: 60px repeat(4, 1fr);
-  grid-gap: 40px;
+  grid-gap: calc(20px + 1.0515247108307044vw);
       grid-template-areas: "head head head head" "students average underperforming homeworks" "barChart barChart rating donut" "barChart barChart rating donut" "lections hours rating donut";
-  padding: 50px 60px 64px 60px;
+  padding: calc(25px + 1.3144058885383807vw) calc(30px + 1.5772870662460567vw) calc(32px + 1.6824395373291272vw) calc(30px + 1.5772870662460567vw);
 }
 
 .board_head {
@@ -364,7 +364,7 @@ input {
 
 .head_title__title {
   font-weight: 600;
-  font-size: 30px;
+  font-size: calc(14px + 0.8412197686645636vw);
   line-height: 36px;
   letter-spacing: 0.01em;
   color: #000000;
@@ -519,7 +519,7 @@ input {
 
 .simple_text__counter {
   font-weight: 600;
-  font-size: 28px;
+  font-size: calc(14px + 0.7360672975814931vw);
   line-height: 24px;
   letter-spacing: 0.01em;
   color: #000000;
@@ -540,7 +540,7 @@ input {
 
 .simple_text__procent {
   font-weight: 500;
-  font-size: 20px;
+  font-size: calc(14px + 0.31545741324921134vw);
   line-height: 16px;
   letter-spacing: 0.01em;
   color: #A6ACBE;
@@ -845,8 +845,8 @@ input {
   height: 103px;
   border-radius: 50%;
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .board_donut__chart_chart {
@@ -960,3 +960,114 @@ input {
 /*-----------------------*/
 /*---------MEDIA---------*/
 /*-----------------------*/
+@media (max-width: 1800px) {
+  .board {
+    -ms-grid-columns: 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 60px calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr;
+    grid-template-rows: 60px repeat(6, 1fr);
+    grid-gap: calc(20px + 1.0515247108307044vw);
+        grid-template-areas: "head head head" "barChart barChart students" "barChart barChart average" "rating donut underperforming" "rating donut homeworks" "rating donut lections" ". . hours";
+  }
+  .board_head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  .board_students {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .board_average {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .board_underperforming {
+    -ms-grid-row: 7;
+    -ms-grid-column: 5;
+  }
+  .board_homeworks {
+    -ms-grid-row: 9;
+    -ms-grid-column: 5;
+  }
+  .board_barChart {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .board_rating {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 1;
+  }
+  .board_donut {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 3;
+  }
+  .board_lections {
+    -ms-grid-row: 11;
+    -ms-grid-column: 5;
+  }
+  .board_hours {
+    -ms-grid-row: 13;
+    -ms-grid-column: 5;
+  }
+}
+
+@media (max-width: 1300px) {
+  .board {
+    -ms-grid-columns: 1fr calc(20px + 1.0515247108307044vw) 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 60px calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr calc(20px + 1.0515247108307044vw) 1fr;
+    grid-template-rows: 60px repeat(8, 1fr);
+    grid-gap: calc(20px + 1.0515247108307044vw);
+        grid-template-areas: "head head" "students average" "barChart barChart" "barChart barChart" "underperforming homeworks" "rating donut" "rating donut" "rating donut" "lections hours";
+  }
+  .board_head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .board_students {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .board_average {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .board_underperforming {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .board_homeworks {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+  }
+  .board_barChart {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .board_rating {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 1;
+  }
+  .board_donut {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 3;
+  }
+  .board_lections {
+    -ms-grid-row: 17;
+    -ms-grid-column: 1;
+  }
+  .board_hours {
+    -ms-grid-row: 17;
+    -ms-grid-column: 3;
+  }
+}

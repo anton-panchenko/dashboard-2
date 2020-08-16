@@ -2,3 +2,36 @@
 /*---------MEDIA---------*/
 /*-----------------------*/
 
+@media(max-width: 1800px){
+  .board{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px repeat(6, 1fr);
+    grid-gap: calc(20px + 1.0515247108307044vw);
+    grid-template-areas:
+            "head head head"
+            "barChart barChart students"
+            "barChart barChart average"
+            "rating donut underperforming"
+            "rating donut homeworks"
+            "rating donut lections"
+            ". . hours";
+  }
+}
+
+@media(max-width: 1300px){
+  .board{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60px repeat(8, 1fr);
+    grid-gap: calc(20px + 1.0515247108307044vw);
+    grid-template-areas:
+            "head head"
+            "students average"
+            "barChart barChart"
+            "barChart barChart"
+            "underperforming homeworks"
+            "rating donut"
+            "rating donut"
+            "rating donut"
+            "lections hours";
+  }
+}

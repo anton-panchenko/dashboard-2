@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 innerSize: '85%',
                 dataLabels: {
                     enabled: false
-                }
+                },
+                borderWidth: 0,
             },
             series: {
                 states: {

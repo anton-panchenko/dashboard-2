@@ -33,7 +33,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 80px 0 60px;
+  padding: 0 calc(40px + 2.103049421661409vw)
+    0 calc(30px + 1.5772870662460567vw);
   &_search{
     &__wrap{
       display: flex;
@@ -100,7 +101,7 @@ input{
   border: none;
   box-shadow: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: calc(14px + 0.10515247108307045vw);
   line-height: 22px;
   letter-spacing: 0.01em;
   color: #A6ACBE;
@@ -124,7 +125,7 @@ input{
     align-items: center;
   }
   &_item{
-    box-shadow: 0px 4px 10px
+    box-shadow: 0 4px 10px
       rgba(0, 0, 0, 0.05);
     width: 54px;
     height: 54px;
@@ -176,14 +177,17 @@ input{
   background-color: #F8F8FB;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 60px repeat(4, 1fr);
-  grid-gap: 40px;
+  grid-gap: calc(20px + 1.0515247108307044vw);
   grid-template-areas:
   "head head head head"
   "students average underperforming homeworks"
   "barChart barChart rating donut"
   "barChart barChart rating donut"
   "lections hours rating donut";
-  padding: 50px 60px 64px 60px;
+  padding: calc(25px + 1.3144058885383807vw)
+    calc(30px + 1.5772870662460567vw)
+    calc(32px + 1.6824395373291272vw)
+    calc(30px + 1.5772870662460567vw);
 }
 
 .board_head{
@@ -196,7 +200,7 @@ input{
   &_title{
     &__title{
       font-weight: 600;
-      font-size: 30px;
+      font-size: calc(14px + 0.8412197686645636vw);
       line-height: 36px;
       letter-spacing: 0.01em;
       color: #000000;
@@ -305,7 +309,7 @@ input{
   &_text{
     &__counter{
       font-weight: 600;
-      font-size: 28px;
+      font-size: calc(14px + 0.7360672975814931vw);
       line-height: 24px;
       letter-spacing: 0.01em;
       color: #000000;
@@ -318,7 +322,7 @@ input{
     }
     &__procent{
       font-weight: 500;
-      font-size: 20px;
+      font-size: calc(14px + 0.31545741324921134vw);
       line-height: 16px;
       letter-spacing: 0.01em;
       color: #A6ACBE;
@@ -528,7 +532,7 @@ input{
       height: 103px;
       border-radius: 50%;
       background-color: #FFFFFF;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
     &_chart{
       width: 250px;

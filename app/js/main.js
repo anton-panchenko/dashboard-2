@@ -1,5 +1,4 @@
 // Кнопки меню
-
 document.querySelectorAll('.nav_item')
     .forEach(e => {
         e.addEventListener('click', function (event) {
